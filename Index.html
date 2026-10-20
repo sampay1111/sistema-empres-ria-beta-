@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <title>Almoxarifado Inteligente</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">📦 <span data-i18n="brand">Almoxarifado Inteligente</span></div>
+      <label for="language" data-i18n="language">Idioma</label>
+      <select id="language">
+        <option value="pt">🇧🇷 Português</option>
+        <option value="en">🇺🇸 English</option>
+        <option value="es">🇪🇸 Español</option>
+      </select>
+      <nav>
+        <button data-page="dashboard" class="nav-btn active">▦ <span data-i18n="dashboard">Painel</span></button>
+        <button data-page="products" class="nav-btn">📦 <span data-i18n="products">Produtos</span></button>
+        <button data-page="movements" class="nav-btn">↕ <span data-i18n="movements">Movimentações</span></button>
+        <button data-page="notes" class="nav-btn">📝 <span data-i18n="notes">Anotações</span></button>
+        <button data-page="alerts" class="nav-btn">⚠️ <span data-i18n="alerts">Alertas</span></button>
+        <button data-page="suppliers" class="nav-btn">♧ <span data-i18n="suppliers">Fornecedores</span></button>
+        <button data-page="reports" class="nav-btn">▤ <span data-i18n="reports">Relatórios</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <span id="connectionStatus">● Conectando...</span>
+        <button id="refreshBtn" class="secondary">↻ Atualizar dados</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="secondary menu-btn" aria-label="Abrir menu">☰</button>
+        <h2 id="pageTitle">Painel</h2>
+        <span class="server-tag">API conectada</span>
+      </header>
+
+      <section class="content" id="content">
+        <div class="card">Carregando sistema...</div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot" aria-live="polite"></div>
+</body>
+</html>
