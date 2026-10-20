@@ -1,0 +1,9 @@
+
+services:
+  - type: web
+    name: almoxarifado-inteligente
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
